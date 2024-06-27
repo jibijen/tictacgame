@@ -1,7 +1,9 @@
 import './App.css';
 import Board from "./Board";
 import Square from "./Square";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+
+//<h>welcome to TIC-TAC-TOE</h>
 
 const defaultSquares = () => (new Array(9)).fill(null);
 
@@ -79,6 +81,9 @@ function App() {
 
   return (
     <main>
+       <div>
+      <h1>HELLO FROM TEAM Welcome to<span className="highlight"> Tic-Tac-Toe.</span></h1>
+      </div>
       <Board>
         {squares.map((square,index) =>
           <Square
@@ -89,12 +94,12 @@ function App() {
       </Board>
       {!!winner && winner === 'x' && (
         <div className="result green">
-          You WON!
+          Hurray!!! USER WON..
         </div>
       )}
       {!!winner && winner === 'o' && (
         <div className="result red">
-          You LOST!
+          Alas!!! AI won..User Lost
         </div>
       )}
 
